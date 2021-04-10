@@ -42,13 +42,12 @@ For example: 'Cat' would come before 'apple'
 
 const sortNames = (arr) => {
   // Solution code here...
-  return arr.sort((a, b) => {
-    if (a.toUpperCase() < b.toLowerCase()) return -1;
-   if (a.toUpperCase() > b.toLowerCase()) return 1;
+  // return arr.sort((a, b) => {
+  //   if (a.toUpperCase() < b.toLowerCase()) return -1;
+  //  if (a.toUpperCase() > b.toLowerCase()) return 1;
    
-   
-  });
-
+  // });
+  return arr.sort ();
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,10 +114,18 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  return arr.sort((a, b) => {
-    if (a.price > b.price) return 1;
-    if (a.price < b.price) return -1;
+  arr.sort((a,b)=> {
+    if ( a.price < b.price ){
+      return -1;
+    }
+    if ( a.price > b.price ){
+      return 1;
+    }
+    if ( a.price === b.price ){
+      return 0;
+    }
   });
+  return arr;
 
 };
 
