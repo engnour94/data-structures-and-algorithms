@@ -56,11 +56,22 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
-  return charArray.sort((a, b) => {
-    if (a.children.length < b.children.length) return -1;
-    if (a.children.length > b.children.length) return 1;
-    else return 0;
-  });
+  charArray.sort((a,b)=>{
+    if (a.children.length < b.children.length){
+      return -1;
+    } else if (a.children.length > b.children.length){
+      return 1;
+    }else if (a.children.length === b.children.length){
+      if (a.house.toLowerCase () < b.house.toLowerCase ()){
+        return -1;
+      }else if (a.house.toLowerCase () > b.house.toLowerCase ()){
+        return 1;
+      }else if (a.house.toLowerCase () === b.house.toLowerCase ()){
+        return 0;
+      }
+    }});
+  return charArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
