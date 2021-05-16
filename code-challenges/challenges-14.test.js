@@ -299,3 +299,4 @@ describe('Testing challenge 6', () => {
     expect(detectTicTacToeWin([['', '', ''], ['O', 'O', ''], ['X', 'O', 'X']])).toEqual(false);
   });
 });
+
