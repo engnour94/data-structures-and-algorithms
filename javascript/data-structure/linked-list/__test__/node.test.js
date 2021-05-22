@@ -1,6 +1,6 @@
 'use strict';
-const Node = require('../linked-list.js');//linked-list.js
-
+const {Node} = require('../linked-list.js');//linked-list.js
+// const LinkedList = require('../linked-list');
 describe('node class', () => {
     it('should create new object', () => {
         // arrange
