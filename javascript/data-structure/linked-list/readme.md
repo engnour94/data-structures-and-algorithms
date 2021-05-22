@@ -61,4 +61,4 @@ Space Complexity: O(1).
 
 ## 401 Challenges
 
-[Go Here!](javascript/Readme.md)
+[Go Here!](/javascript/Readme.md)
