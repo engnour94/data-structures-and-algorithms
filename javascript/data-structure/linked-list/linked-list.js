@@ -1,8 +1,6 @@
 
 'use strict';
-/**
- * @param  {} value
- */
+
 
 class Node {
     constructor(value) {
