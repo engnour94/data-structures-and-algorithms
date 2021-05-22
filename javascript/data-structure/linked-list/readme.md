@@ -56,9 +56,9 @@ Space Complexity: O(1).
 * toString() : return a string of the linked list values in format of "{ a } -> { b } -> { c } -> NULL"
 ### Solution
 
-![whiteboard](code5.jpg)
+![whiteboard](1.jpg)
 
 
 ## 401 Challenges
 
-[Go Here!](/javascript/data-structure/Readme.md)
+[Go Here!](javascript/Readme.md)
