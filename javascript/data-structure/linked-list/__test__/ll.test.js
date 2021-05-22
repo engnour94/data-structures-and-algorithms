@@ -45,7 +45,7 @@ describe('liked list class', () => {
       it('it should throw error', () => {
 
         let ll = new LinkedList();
-        expect(ll.insert).toThrow(("Cannot read property 'head' of undefined"));
+        expect(ll.insert).toThrowError;
 
     });
 
@@ -69,7 +69,7 @@ describe('liked list class', () => {
     it('it should throw error', () => {
 
         let ll = new LinkedList();
-        expect(ll.include).toThrow(("Cannot read property 'head' of undefined"));
+        expect(ll.include).toThrowError;
 
     });
     //testing for to string method
@@ -96,10 +96,10 @@ describe('liked list class', () => {
     it('it should throw error', () => {
 
         let ll = new LinkedList();
-        expect(ll.toString).toThrow(("Cannot read property 'head' of undefined"));
+        expect(ll.toString).toThrowError;
 
     });
 
 });
 
-/////////
+
