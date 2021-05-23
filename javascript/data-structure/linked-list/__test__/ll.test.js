@@ -91,8 +91,9 @@ describe('liked list class', () => {
         //act
         //assert
         expect(ll.toString()).toEqual('NULL');
-       
+       //
     });
+
     it('it should throw error', () => {
 
         let ll = new LinkedList();
