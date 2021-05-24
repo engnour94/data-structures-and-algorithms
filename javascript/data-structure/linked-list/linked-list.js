@@ -11,9 +11,11 @@ class Node {
 class LinkedList {
     constructor() {
         this.head = null; //first element of the list
+        this.size=0; 
         //this.tail=null;// last element of the list 
         // the node just know about the next node but it doesn't know about the entire list
-        //the list just have to know about the 1st and last node  
+        //the list just have to know about the 1st and last node 
+        
     }
     /**
      * insert value at the head
@@ -26,9 +28,11 @@ class LinkedList {
             let newNode = new Node(value);
             if (!this.head) {
                 this.head = newNode;
+                this.size++;
             } else {
                 newNode.next = this.head;
                 this.head = newNode;
+                this.size++;
             }
         } catch (error) {
 
@@ -43,12 +47,14 @@ class LinkedList {
             let node = new Node(value);
             if (!this.head) {// empty linked list
                 this.head = node;
+                this.size++;
             } else {
                 let temp = this.head;
                 while (temp.next) {
                     temp = temp.next;
                 }
                 temp.next = node;
+                this.size++;
             }
         } catch (error) {
             console.log(`Something went error`, error);
@@ -112,12 +118,14 @@ class LinkedList {
             if (temp.value === value) {
                 node.next = this.head
                 this.head = node
-                return
+                this.size++;
+                return// to exit if
             }
             while (temp) {
                 if (temp.next.value === value) {//the value of the next node 
                     node.next = temp.next;
                     temp.next = node;
+                    this.size++;
                     return
                 } else {
                     temp = temp.next;
@@ -140,6 +148,7 @@ class LinkedList {
                 if (temp.value === value) {//the value of the next node 
                     node.next = temp.next;
                     temp.next = node;
+                    this.size++;
                     return
                 } else {
                     temp = temp.next;
@@ -152,6 +161,23 @@ class LinkedList {
         }
 
     }
+ //a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+    kthFromEnd(k){
+     try {
+        let temp = this.head;
+        for (let i = this.size-1; i <= this.size-1; i--) {
+            if (i===k){
+                return temp.value
+            }
+            temp=temp.next
+            
+        }
+     } catch (error) {
+        console.error(` the value k doesn't  exist  `, error);
+     }
+
+    }
+
 
 }
 
@@ -179,6 +205,9 @@ module.exports = {
 // ll.insert(3)
 // ll.insertBefore(3, 4)
 // console.log(ll.head.value)
-
-
-
+//--------console.log for kthFromEnd(k)----//
+// const ll = new LinkedList();
+// ll.insert(1);
+// ll.insert(2);
+// ll.insert(3)
+// console.log(ll.kthFromEnd(1))

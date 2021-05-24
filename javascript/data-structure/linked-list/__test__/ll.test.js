@@ -157,7 +157,7 @@ describe('liked list class', () => {
         expect(ll.head.next.value).toBe(3)
 
     })
-    
+
     it('it should  insert a node before a node located in the middle of a linked list', () => {
         //act
         let ll = new LinkedList();
@@ -186,7 +186,7 @@ describe('liked list class', () => {
         ll.insert(4);
         //assert
         expect(ll.insertBefore(10, 5)).toThrowError;
-      
+
     })
 
     // testing for insertAfter()
@@ -257,9 +257,47 @@ describe('liked list class', () => {
         ll.insert(4);
         //assert
         expect(ll.insertAfter(10, 5)).toThrowError;
-      
+
     })
-    
+
+    /// testing  kthFromEnd(k) method
+
+    it("it should take a number, k, as a parameter. Return the node’s value that is k from the end of the linked list", () => {
+        //act
+        let ll = new LinkedList();
+        ll.insert(1);//0
+        ll.insert(2);//1
+        ll.insert(3);//2
+        ll.insert(4);//3
+
+        //assert
+        /* “Happy Path” */
+        expect(ll.kthFromEnd(0)).toBe(1);
+        expect(ll.kthFromEnd(1)).toBe(2);
+        expect(ll.kthFromEnd(2)).toBe(3);
+        expect(ll.kthFromEnd(3)).toBe(4);
+
+        /* Where k and the length of the list are the same */
+        expect(ll.kthFromEnd(4)).toThrowError;
+        /*Where k is not a positive integer */
+        expect(ll.kthFromEnd(-1)).toThrowError;
+        /* Where k is greater than the length of the linked list */
+        expect(ll.kthFromEnd(10)).toThrowError;
+    })
+
+    it("testing for the linked list is of a size 1 ", () => {
+        //act
+        let ll = new LinkedList();
+        ll.insert(1);//0
+        //assert
+        /* “Happy Path” */
+        expect(ll.kthFromEnd(0)).toBe(1);
+        /*Where k is not a positive integer */
+        expect(ll.kthFromEnd(-1)).toThrowError;
+        /*Where k is greater than the length of the linked list*/
+        expect(ll.kthFromEnd(10)).toThrowError;
+    })
+
 
 });
 

@@ -96,6 +96,26 @@ the newValue
 - Time Complexity: O(n).
 - Space Complexity: O(1).
 ---
+### kthFromEnd(k):
+
+- declare size property in the  LinkedList constructor  
+- increment size of the LinkedList in the insert,
+insertBefore, insertAfter, and append methods
+- create method kthFromEnd(k) which take value
+- declare temporary pointer points to the head
+- do a for loop descending around the  size of the
+LinkedList 
+- check if the index of for loop equal k if yes return
+value
+- make the temporary pointer points to the next
+
+**Big O**
+
+- Time Complexity: O(n).
+- Space Complexity: O(1).
+---
+
+
 
 ## API
 * insert() : allow you to insert new values at the end of the linked list. (return the whole class to allow chaining insertion)
@@ -103,15 +123,23 @@ the newValue
 * include() : To evaluate wither the linked list has a cretin value in it or not (returns a boolean).
 
 * toString() : return a string of the linked list values in format of "{ a } -> { b } -> { c } -> NULL"
+
+* kthFromEnd(k): a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. 
+
+* append(): which adds a new node with the given value to the end of the list
+
+* insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+* insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+---
+
+
 ### Solution
 
-![whiteboard](code6.jpg)
+![whiteboard](./code7.jpg)
 
-### Testing and verification
 
-![test](./test6.png)
-
-### Solutions
+### github workflow actions
 
 [Go Here](https://github.com/engnour94/data-structures-and-algorithms/actions)
 
