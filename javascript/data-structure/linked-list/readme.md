@@ -68,6 +68,19 @@ node with pointer
 
 ---
 
+### **append:**
+- create append method which takes a value
+- create a new node
+- make if statement that check if the head is empty
+then the inserted value will be the head else 
+declare temporary pointer then while loop over the
+next temp until reach to the last node then connect 
+node with pointer
+
+**Big O**
+- Time Complexity: O(n).
+- Space Complexity: O(1).
+
 ### insertBefore:
 - create insert method which takes the value and 
 the newValue
@@ -95,19 +108,19 @@ the newValue
 
 - Time Complexity: O(n).
 - Space Complexity: O(1).
----
-### kthFromEnd(k):
 
-- declare size property in the  LinkedList constructor  
-- increment size of the LinkedList in the insert,
-insertBefore, insertAfter, and append methods
-- create method kthFromEnd(k) which take value
-- declare temporary pointer points to the head
-- do a for loop descending around the  size of the
-LinkedList 
-- check if the index of for loop equal k if yes return
-value
-- make the temporary pointer points to the next
+---
+
+### zipLists:
+
+* create function zipLists(listOne listTwo)  takes in two different LLs start with creating new LL.
+
+* define the current value for both of the LLs provided as head
+
+* start a while loop whenever the current of both LLs have a value, in the loop check if the current for each LL still has a value 
+* if true insert the value to the new LL starting form first LL value to insert the head from the first LL
+* update the current for each LL
+ * if false exit the while loop and return the new LL.
 
 **Big O**
 
@@ -118,25 +131,29 @@ value
 
 
 ## API
-* insert() : allow you to insert new values at the end of the linked list. (return the whole class to allow chaining insertion)
+* **insert() :** allow you to insert new values at the end of the linked list. (return the whole class to allow chaining insertion)
 
-* include() : To evaluate wither the linked list has a cretin value in it or not (returns a boolean).
+* **include() :** To evaluate wither the linked list has a cretin value in it or not (returns a boolean).
 
-* toString() : return a string of the linked list values in format of "{ a } -> { b } -> { c } -> NULL"
+* **toString() :** return a string of the linked list values in format of "{ a } -> { b } -> { c } -> NULL"
 
-* kthFromEnd(k): a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. 
+* **kthFromEnd(k):** a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. 
 
-* append(): which adds a new node with the given value to the end of the list
+* **append():** which adds a new node with the given value to the end of the list
 
-* insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
-* insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+* **insertBefore(value, newVal) :** which add a new node with the given newValue immediately before the first value node
+
+* **insertAfter(value, newVal) :** which add a new node with the given newValue immediately after the first value node
+
+* **zipLists(listOne listTwo) :** takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
 
 ---
 
 
 ### Solution
 
-![whiteboard](./code7.jpg)
+![whiteboard](./code8.jpg)
 
 
 ### github workflow actions

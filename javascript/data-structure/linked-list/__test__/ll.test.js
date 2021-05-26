@@ -1,7 +1,8 @@
 
 
 // const Node = require('../linked-list');
-const { LinkedList } = require('../linked-list');
+const { LinkedList } = require('../linked-list.js');
+// const zipLists =require('../llzip.js')
 const { expect } = require('@jest/globals');
 
 describe('liked list class', () => {
@@ -297,6 +298,8 @@ describe('liked list class', () => {
         /*Where k is greater than the length of the linked list*/
         expect(ll.kthFromEnd(10)).toThrowError;
     })
+
+ 
 
 
 });
