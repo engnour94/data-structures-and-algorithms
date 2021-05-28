@@ -163,7 +163,9 @@ class LinkedList {
     }
  //a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
     kthFromEnd(k){
-     try {
+        if(k>=this.size||k<0){
+            throw new Error('Invalid');
+        }
         let temp = this.head;
         for (let i = this.size-1; i <= this.size-1; i--) {
             if (i===k){
@@ -172,10 +174,7 @@ class LinkedList {
             temp=temp.next
             
         }
-     } catch (error) {
-        console.error(` the value k doesn't  exist  `, error);
-     }
-
+    
     }
 
 }
