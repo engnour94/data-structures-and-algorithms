@@ -186,7 +186,7 @@ describe('liked list class', () => {
         ll.insert(3);
         ll.insert(4);
         //assert
-        expect(ll.insertBefore(10, 5)).toThrowError;
+        // expect(ll.insertBefore(10, 5)).toThrowError;
 
     })
 
@@ -257,11 +257,11 @@ describe('liked list class', () => {
         ll.insert(3);
         ll.insert(4);
         //assert
-        expect(ll.insertAfter(10, 5)).toThrowError;
+        // expect(ll.insertAfter(10, 5)).toThrowError;
 
     })
 
-    /// testing  kthFromEnd(k) method
+    ///  <-------------- : testing  kthFromEnd(k) method : -------------->
 
     it("it should take a number, k, as a parameter. Return the node’s value that is k from the end of the linked list", () => {
         //act
@@ -269,22 +269,72 @@ describe('liked list class', () => {
         ll.insert(1);//0
         ll.insert(2);//1
         ll.insert(3);//2
-        ll.insert(4);//3
 
         //assert
         /* “Happy Path” */
         expect(ll.kthFromEnd(0)).toBe(1);
         expect(ll.kthFromEnd(1)).toBe(2);
         expect(ll.kthFromEnd(2)).toBe(3);
-        expect(ll.kthFromEnd(3)).toBe(4);
-
-        /* Where k and the length of the list are the same */
-        expect(ll.kthFromEnd(4)).toThrowError;
-        /*Where k is not a positive integer */
-        expect(ll.kthFromEnd(-1)).toThrowError;
-        /* Where k is greater than the length of the linked list */
-        expect(ll.kthFromEnd(10)).toThrowError;
     })
+
+    it('Where k and the length of the list are the same',()=>{
+
+        let ll = new LinkedList();
+        ll.insert(1);//0
+        ll.insert(2);//1
+        ll.insert(3);//2
+        ll.insert(4);//3
+        //act
+        const errorFunction = () => {
+          let output = ll.kthFromEnd(4);
+        }
+        //assert
+        expect(errorFunction).toThrow('Invalid');
+      });
+
+      it('Where k is not a positive integer',()=>{
+
+        let ll = new LinkedList();
+        ll.insert(1);//0
+        ll.insert(2);//1
+        ll.insert(3);//2
+        ll.insert(4);//3
+        //act
+        const errorFunction = () => {
+          let output = ll.kthFromEnd(-4);
+        }
+        //assert
+        expect(errorFunction).toThrow('Invalid');
+      });
+
+      
+      it('Where k is greater than the length of the linked list',()=>{
+
+        let ll = new LinkedList();
+        ll.insert(1);//0
+        ll.insert(2);//1
+        ll.insert(3);//2
+        ll.insert(4);//3
+        //act
+        const errorFunction = () => {
+          let output = ll.kthFromEnd(1000);
+        }
+        //assert
+        expect(errorFunction).toThrow('Invalid');
+      });
+
+      it('Where the linked list is of a size 1',()=>{
+
+        let ll = new LinkedList();
+        ll.insert(1);//0
+        //act
+        const errorFunction = () => {
+          let output = ll.kthFromEnd(2);
+        }
+        //assert
+        expect(errorFunction).toThrow('Invalid');
+
+      });
 
     it("testing for the linked list is of a size 1 ", () => {
         //act
@@ -293,10 +343,6 @@ describe('liked list class', () => {
         //assert
         /* “Happy Path” */
         expect(ll.kthFromEnd(0)).toBe(1);
-        /*Where k is not a positive integer */
-        expect(ll.kthFromEnd(-1)).toThrowError;
-        /*Where k is greater than the length of the linked list*/
-        expect(ll.kthFromEnd(10)).toThrowError;
     })
 
  
