@@ -76,12 +76,7 @@ const zipLists = require('../llzip.js')
         expect(result.include(2)).toBeTruthy();
         expect(result.include(5)).toBeFalsy();
         expect(result.toString()).toEqual(`{ 4 } -> { B } -> { 3 } -> { A } -> { 2 } -> { 1 } -> NULL`);
-    });
+    });//"{ 4 } -> { B } -> { 3 } -> { 2 } -> { 1 } -> { A } -> NULL"
 
-    it("EDGE CASE", () => {
-        let result = zipLists([1,2,3], 'Nour');
-        expect(result.head).toBeNull()
-        expect(result.toString()).toEqual(`NULL`);
-    });
 
    })
