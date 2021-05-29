@@ -2,7 +2,7 @@
 'use strict';
 
 const {LinkedList} = require('../linked-list.js');
-
+const { expect } = require('@jest/globals');
 const zipLists = require('../llzip.js')
    describe('',()=>{
 
