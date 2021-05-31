@@ -1,3 +1,5 @@
+![slice](https://capsule-render.vercel.app/api?type=slice&color=gradient&auto&height=200&text=Animal-Shelter&fontAlign=70&rotate=13&fontAlignY=25&desc=Done%20by%20Nour%20AbuEl-nein.&descAlign=70.&descAlignY=44)
+
 # First-in, First out Animal Shelter
 
 Create a class called AnimalShelter which holds only dogs and cats objects. The shelter operates using a first-in, first-out approach
