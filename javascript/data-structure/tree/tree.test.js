@@ -75,6 +75,31 @@ describe('Binary Tree', () => {
 
         expect(tree.postOrder()).toEqual([8,9,7,6,2,4,5,3,1])
     })
+    //---------------testing findMaximumValue()-----------------//
+    it('it should find the maximum number in a tree',()=>{
+    expect(tree.findMaximumValue()).toBe(9)
+    })
+
+    it( "it  should raise an exception if the tree is empty",()=>{
+        let BT = new BinaryTree()
+        const errorFunction = () => {
+            let output =  BT.findMaximumValue();
+        }
+        //assert
+        expect(errorFunction).toThrow('empty tree');
+     })
+     it('it  should raise an exception when using this method with another class',()=>{
+        let BST = new BinarySearchTree()
+        BST.add(20);
+        BST.add(0);
+        BST.add(30);
+        BST.add(40);
+        BST.add(15);
+        expect(BST.findMaximumValue).toThrowError
+     })
+
+
+
 })
 
 //<----------------Testing Binary search tree --------------->
