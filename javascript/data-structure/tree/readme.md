@@ -56,13 +56,15 @@ The BinarySearchTree contains two methods:
 
 - code challenge 16
 
-![](findmaxtree.jpg)
+![whiteboard](findmaxtree.jpg)
+
+
+- code challenge 15
 [Go here to more details !!!](https://drive.google.com/file/d/1IJD4NlWQ-1jAuP73tb7QKDsakSUslAQA/view?usp=sharing)
 
 ![whiteboard](tree.jpg)
 
 
-- code challenge 15
 ### github workflow actions
 
 [Go Here!](https://github.com/engnour94/data-structures-and-algorithms/actions)
