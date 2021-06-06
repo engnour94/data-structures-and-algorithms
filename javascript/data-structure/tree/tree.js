@@ -50,6 +50,23 @@ class BinaryTree{
         return output;
     }
 
+    findMaximumValue(){
+        if (!this.root) throw new Error('empty tree')
+        let result = this.root.value;
+      
+        let traverse=(node)=>{
+            if(node.value>result){
+                result=node.value
+            }
+            if(node.right) traverse(node.right);
+            if(node.left)traverse(node.left);
+
+        }
+        traverse(this.root)
+        return(result)
+
+    }
+
 
 }
 // let BT = new BinaryTree()
