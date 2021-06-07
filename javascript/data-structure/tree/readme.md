@@ -6,15 +6,35 @@ Trees are non-leaner data structure. and we want to implement the following :
 
 ### Challenge
 
-- To make BinaryTree with 3 methods to traverse each nodes InOrder, PreOrder and PostOrder methods.
+- To make BinaryTree with methods to traverse each nodes 
+    * Depth first:
+      InOrder, PreOrder and PostOrder methods.
+    * Breadth first
 - To make BinarySearchTree with add() and contains() methods.
  
 ### Approach & Efficiency
 
 #### BinaryTree
-- preOrder: space O(h)/time O(n)
-- inOrder: space O(h)/time O(n)
-- postOrder: space O(h)/time O(n)
+- **Depth First**
+   - preOrder: space O(h)/time O(n)
+   - inOrder: space O(h)/time O(n)
+   - postOrder: space O(h)/time O(n)
+ - **Breadth First**
+    
+- check if the tree is empty if yes then raise an
+   exception
+- create a variable  array called  output 
+ - create a new queue
+- add the root to the queue(enqueue method)
+- while the queue is not empty  
+- declare a temporary pointer points  to the root
+- if the front has left then add it to queue
+- if the front has right  then add it to queue
+- then dequeue the front and push its value to output
+   array
+- return output
+ - Big O
+    * space O(h)/time O(n)
 
 #### BinarySearchTree
 - add(value): space O(1)/time O(log n)
@@ -51,8 +71,10 @@ The BinaryTree contains the following methods:
 The BinarySearchTree contains two methods:
 1. **`add(value)`** Adds the input value in its place in the sorted tree.
 2. **`contains(value)`** Search the tree and checks if the input value exists
-
+3. **` breadth first`** traversal method which takes a Binary Tree as its unique input. return a list of the values in the tree in the order they were encountered.
 ### Solution
+- code challenge 17
+![whiteboard](bf-tree.jpg)
 
 - code challenge 16
 

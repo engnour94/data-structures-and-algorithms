@@ -1,4 +1,5 @@
 'use strict';
+const {Queue}=require('../stacksAndQueues/stacks-and-queues.js')
 const treeify = require('treeify')
 //-----------------------------//
 class Node{
@@ -65,6 +66,20 @@ class BinaryTree{
         traverse(this.root)
         return(result)
 
+    }
+
+    breadthFirst(){
+        let output=[];
+        let queue = new Queue()
+        if (!this.root) throw new Error( 'Empty Tree!') ;
+        queue.enqueue(this.root)
+        while(!queue.isEmpty()){//queue.front,queue.peek()
+        let front = queue.dequeue();//temp pointer 
+        if(front.left)queue.enqueue(front.left);
+        if(front.right)queue.enqueue(front.right);
+        output.push(front.value)
+        }
+         return output
     }
 
 
@@ -162,4 +177,3 @@ module.exports={
 // BST.add(2500)
 // console.log(BST.contains('21l0'))
 // console.log(treeify.asTree(BST,true))
-
