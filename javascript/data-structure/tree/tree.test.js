@@ -97,8 +97,19 @@ describe('Binary Tree', () => {
         BST.add(15);
         expect(BST.findMaximumValue).toThrowError
      })
+    //---------------testing breadthFirst()-----------------// 
+    it(' it should traverse the tree level by level from left to right', () => {
+        expect(tree.breadthFirst()).toEqual([1,2,3,6,4,5,7,8,9])
+    })
 
-
+    it( "it  should raise an exception if the tree is empty",()=>{
+        let BT = new BinaryTree()
+        const errorFunction = () => {
+            let output =  BT.breadthFirst();
+        }
+        //assert
+        expect(errorFunction).toThrow('Empty Tree!');
+     })
 
 })
 
