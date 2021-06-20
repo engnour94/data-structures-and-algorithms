@@ -20,3 +20,4 @@
 |Tree| [link](/javascript/data-structure/tree)| 
 |Fuzz Buzz Tree| [link](/javascript/data-structure/fizzBuzzTree)|
 |Insertion Sort | [link](/javascript/code-challenges/insertionSort)| 
+
