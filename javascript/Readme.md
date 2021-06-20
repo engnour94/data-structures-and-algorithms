@@ -18,4 +18,6 @@
 |Animal Shelter| [fifoAnimalShelter js](/javascript/data-structure/fifoAnimalShelter/fifo-animal-shelter.js)  /  [Testing-Unit](/javascript/data-structure/fifoAnimalShelter/shelter.test.js)  / [README](/javascript/data-structure/fifoAnimalShelter/readme.md)|
 |Multi Bracket Validation| [link](/javascript/data-structure/multiBracketValidation)| 
 |Tree| [link](/javascript/data-structure/tree)| 
-|Fuzz Buzz Tree| [link](/javascript/data-structure/fizzBuzzTree)| 
+|Fuzz Buzz Tree| [link](/javascript/data-structure/fizzBuzzTree)|
+|Insertion Sort | [link](/javascript/code-challenges/insertionSort)| 
+
