@@ -1,6 +1,7 @@
 module.exports =function insertionSort(arr){
 
     if(!arr||arr.length===0||typeof arr=== 'string'||typeof arr=== 'number') return ('you should insert numerical array')
+
     for(let i=1 ; i<arr.length; i++){
       if(typeof arr[i] === 'string'||typeof arr[i] === 'boolean'){
           return ('you should insert numerical array')
