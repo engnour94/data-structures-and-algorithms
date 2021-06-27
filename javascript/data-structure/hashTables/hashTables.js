@@ -101,4 +101,9 @@ contains(key){
 }
 
 
-module.exports= HashTable
+
+module.exports = {
+  Node,
+  LinkedList,
+  HashTable,
+};

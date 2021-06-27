@@ -1,4 +1,4 @@
-const HashTable=require('./hashTables.js')
+const {HashTable}=require('./hashTables.js')
 
 describe('HashTable Testing',()=>{
  it('Adding a key/value to your hashtable results in the value being in the data structure',()=>{
