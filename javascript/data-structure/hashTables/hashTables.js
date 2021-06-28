@@ -52,10 +52,14 @@ class HashTable{
 // Arguments: key
 // Returns: Index in the collection for that key
   hash(key){
-      let  ascii= key.split('').reduce((acc,n)=>{
-          return acc+n.charCodeAt(0);
-      },0)*  599   % this.size
-      return ascii
+      // let  ascii= key.split('').reduce((acc,n)=>{
+      //     return acc+n.charCodeAt(0);
+      // },0)*  599   % this.size
+      // return ascii
+      const asciiSum = key.split('').reduce((acc, val) => {
+        return acc * val.charCodeAt(0);
+      }, 1);
+      return (asciiSum * 71) % this.table.length;
   }
 // Arguments: key, value
 // Returns: nothing
@@ -69,6 +73,8 @@ class HashTable{
 
   }
 
+
+
 contains(key){
     let hashed = this.hash(key)
    if(this.table[hashed]){
@@ -78,6 +84,9 @@ contains(key){
    }
 
   }
+
+ 
+
 //   Arguments: key
 // Returns: Value associated with that key in the table
   get(key){
